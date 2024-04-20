@@ -33,3 +33,11 @@ class Solution:
             return nums[2+1] 
         else:
             return nums[2]
+
+
+'OR'
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        nums = sorted(set(nums), reverse=True)
+        return nums[0] if len(nums) < 3 else nums[2]
+
